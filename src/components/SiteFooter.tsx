@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SiteFooter() {
@@ -6,9 +7,18 @@ export default function SiteFooter() {
       <div className="wrap">
         <div className="mb-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
           <div>
-            <p className="mb-[0.85rem] text-xs font-medium tracking-wider text-charcoal">
-              晴室
-            </p>
+            <div className="mb-[0.85rem] flex items-center gap-2.5">
+              <Image
+                src="/brand/logo-circle-nav.png"
+                alt="晴室"
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-full object-cover"
+              />
+              <p className="text-xs font-medium tracking-wider text-charcoal">
+                晴室
+              </p>
+            </div>
             <p className="text-[0.8125rem] font-light leading-[1.85] tracking-wide text-charcoal-mute">
               少一點東西，多一點剛好。
               <br />

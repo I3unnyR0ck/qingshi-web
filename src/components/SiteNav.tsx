@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -61,10 +62,18 @@ export default function SiteNav() {
       <div className="wrap flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="inline-flex min-h-11 items-center text-[1.125rem] font-medium tracking-brand text-charcoal"
+          className="inline-flex min-h-11 items-center gap-2.5 text-[1.125rem] font-medium tracking-brand text-charcoal"
           onClick={() => setOpen(false)}
         >
-          晴室
+          <Image
+            src="/brand/logo-circle-nav.png"
+            alt="晴室"
+            width={40}
+            height={40}
+            className="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10"
+            priority
+          />
+          <span>晴室</span>
         </Link>
 
         <button
