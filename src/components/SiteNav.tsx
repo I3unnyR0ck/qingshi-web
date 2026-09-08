@@ -6,8 +6,12 @@ import { useEffect, useState } from "react";
 
 const LINKS = [
   { href: "/collections/home/", label: "小家居" },
+  { href: "/collections/lights/", label: "燈具" },
+  { href: "/collections/tools/", label: "小工具" },
+  { href: "/collections/kitchen/", label: "廚房" },
   { href: "/collections/clean/", label: "清潔" },
   { href: "/collections/tech/", label: "3C" },
+  { href: "/collections/pet/", label: "寵物" },
   { href: "/about/", label: "關於" },
   { href: "/interest/", label: "登記" },
 ];

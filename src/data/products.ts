@@ -1,4 +1,11 @@
-export type CategoryId = "home" | "clean" | "tech";
+export type CategoryId =
+  | "home"
+  | "lights"
+  | "tools"
+  | "kitchen"
+  | "clean"
+  | "tech"
+  | "pet";
 
 export type Product = {
   slug: string;
@@ -37,6 +44,30 @@ export const CATEGORIES: Record<
     intro:
       "進門、書桌、床邊——那些你每天都會碰到的小物。我們挑觸感舒服、顏色不搶戲的，讓歸位變得自然一點。",
   },
+  lights: {
+    id: "lights",
+    label: "燈具",
+    path: "/collections/lights/",
+    lead: "燈光不必太亮，剛好照出一點安靜就好。",
+    intro:
+      "桌燈、小夜燈、氣氛燈。材質偏霧面、紙質、木座，讓光在空間裡軟一點、慢一點。",
+  },
+  tools: {
+    id: "tools",
+    label: "小工具",
+    path: "/collections/tools/",
+    lead: "居家會用到的小工具，也可以好好握、好好放。",
+    intro:
+      "刮刀、夾子、掛架——日常會伸手的那些。木柄、霧面、簡約線條，用起來順手，放著也不刺眼。",
+  },
+  kitchen: {
+    id: "kitchen",
+    label: "廚房",
+    path: "/collections/kitchen/",
+    lead: "食器與餐具：每天碰三次，觸感值得認真一點。",
+    intro:
+      "飯碗、餐具、水瓶。陶瓷霧面、木柄、玻璃——吃飯這件事，也可以安靜一點。",
+  },
   clean: {
     id: "clean",
     label: "清潔",
@@ -52,6 +83,14 @@ export const CATEGORIES: Record<
     lead: "線材、支架、桌墊——讓桌面鬆一口氣。",
     intro:
       "充電線、支架、桌墊。少一點刺眼塑膠，多一點霧面與金屬的安靜感，桌面會比較好待。",
+  },
+  pet: {
+    id: "pet",
+    label: "寵物",
+    path: "/collections/pet/",
+    lead: "貓狗的碗、墊、收納——跟家裡其他東西一樣安靜。",
+    intro:
+      "寵物用品也不必花花綠綠。霧面陶瓷、亞麻、簡約收納籃，跟你的小家居放一起也不突兀。",
   },
 };
 
@@ -215,6 +254,202 @@ export const products: Product[] = [
     care: "保持磁吸面清潔；撕貼時勿用力扯傷桌面塗層。",
     styleNote:
       "霧面金屬跟鋁支架很搭。線吸好之後，桌面只留必要的幾樣，看起來就會鬆很多。",
+  },
+  // —— 寵物 ——
+  {
+    slug: "matte-ceramic-pet-bowl",
+    name: "霧面陶瓷寵物碗",
+    shortName: "霧面陶瓷寵物碗",
+    category: "pet",
+    categoryLabel: "寵物",
+    why: "吃飯的碗也可以安靜，不用花花綠綠。",
+    description:
+      "霧面釉、重量穩。貓狗吃飯時碗比較不易推跑，放在牆角或架上也跟小家居一樣低調。",
+    status: "interest",
+    materials: "陶瓷坯體、霧面釉；碗底防滑、邊緣圓潤。",
+    scenes: "廚房一角、陽台、寵物專屬小角落——每天固定吃飯喝水的地方。",
+    care: "溫水沖洗即可；避免劇烈撞擊與突然溫差。",
+    styleNote:
+      "選米白或淺灰，跟木托盤、收納籃放一起不會突兀。旁邊留一點空，進食區看起來比較乾淨。",
+  },
+  {
+    slug: "linen-cat-scratch-pad",
+    name: "亞麻貓抓板／睡墊",
+    shortName: "亞麻貓抓睡墊",
+    category: "pet",
+    categoryLabel: "寵物",
+    why: "抓跟睡可以同一個地方，顏色也不搶客廳。",
+    description:
+      "亞麻觸感、中性色。可以當抓板，也可以躺上去睡一下——放沙發旁或窗邊都自然。",
+    status: "interest",
+    materials: "亞麻布面 × 紙纖／紙板芯；中性霧色，邊緣車縫穩。",
+    scenes: "沙發旁、窗邊陽光處、房間角落——貓常待的那一塊。",
+    care: "表面可輕拍除毛；避免長時間潮濕與暴曬。",
+    styleNote:
+      "選跟沙發或地毯接近的霧色，幾乎融進空間。旁邊放個小玩具籃，角落就完整了。",
+  },
+  {
+    slug: "leash-toy-basket",
+    name: "簡約牽繩收納／狗玩具收納籃",
+    shortName: "牽繩玩具收納籃",
+    category: "pet",
+    categoryLabel: "寵物",
+    why: "牽繩、球、咬骨——有個籃子，玄關就不亂。",
+    description:
+      "開口寬、高度剛好。牽繩掛、玩具丟進去，出門前伸手就拿到，玄關看起來也清爽。",
+    status: "interest",
+    materials: "編織／霧面硬質籃身；輕量、邊緣圓潤不刮手。",
+    scenes: "玄關、客廳角落、寵物進出門的動線旁。",
+    care: "乾布或微濕布擦拭；編織款可輕柔拍塵。",
+    styleNote:
+      "跟木托盤、極簡收納罐同色系，玄關會比較整齊。籃子只放出門會用的，其餘收進櫃裡。",
+  },
+  // —— 燈具 ——
+  {
+    slug: "matte-desk-lamp",
+    name: "霧面桌燈",
+    shortName: "霧面桌燈",
+    category: "lights",
+    categoryLabel: "燈具",
+    why: "書桌需要一點光，但不需要刺眼。",
+    description:
+      "霧面燈罩、角度可微調。看書、工作剛好夠亮，光灑下來比較軟，不會搶桌面其他東西。",
+    status: "interest",
+    materials: "霧面金屬／樹脂燈罩 × 穩重底座；光線偏暖白、可微調角度。",
+    scenes: "書桌、床頭小桌、工作台——需要定點照明的地方。",
+    care: "關燈冷卻後乾布輕拭；避免水濺入燈頭。",
+    styleNote:
+      "霧面燈罩跟鋁支架、淺色桌墊很合。燈旁少放雜物，光自己就夠安靜。",
+  },
+  {
+    slug: "paper-fabric-night-light",
+    name: "紙／布質小夜燈",
+    shortName: "紙布小夜燈",
+    category: "lights",
+    categoryLabel: "燈具",
+    why: "半夜起來，只要一點柔光就好。",
+    description:
+      "紙或布質燈罩，光透出來很軟。放床邊或走道，半夜起來不會被亮燈嚇到。",
+    status: "interest",
+    materials: "和紙／棉布燈罩 × 輕量底座；光線柔散、低瓦數。",
+    scenes: "床頭、走道、嬰幼兒房——需要整夜微亮的地方。",
+    care: "乾布輕拍除塵；避免水洗燈罩與高溫烘乾。",
+    styleNote:
+      "米白或淺麻色最自然。跟亞麻寢具、木床頭櫃放一起，夜燈幾乎隱形。",
+  },
+  {
+    slug: "wood-base-mood-lamp",
+    name: "木座氣氛燈",
+    shortName: "木座氣氛燈",
+    category: "lights",
+    categoryLabel: "燈具",
+    why: "不是為了看清楚，是為了讓空間鬆一點。",
+    description:
+      "木座穩、燈罩安靜。傍晚開一盞，客廳或角落會有一點溫度，不必把大燈全打開。",
+    status: "interest",
+    materials: "天然木座 × 霧面／布質燈罩；光線偏暖、底座沉穩。",
+    scenes: "客廳角落、沙發旁、玄關矮櫃——想留一點氣氛的地方。",
+    care: "木座乾布輕拭，可偶爾擦少量護木油；燈罩冷卻後再清理。",
+    styleNote:
+      "木座跟木托盤、木柄餐具同語彙。旁邊留空，燈光自己會把角落撐起來。",
+  },
+  // —— 小工具 ——
+  {
+    slug: "wood-handle-scraper",
+    name: "木柄刮刀／清潔小鏟",
+    shortName: "木柄刮刀小鏟",
+    category: "tools",
+    categoryLabel: "小工具",
+    why: "刮鍋、鏟縫隙——握起來溫潤，用完也好放。",
+    description:
+      "木柄觸感溫潤，刀刃／鏟面剛好。廚房刮鍋、窗縫清灰，伸手就順，掛起來也不難看。",
+    status: "interest",
+    materials: "天然木柄 × 不鏽鋼／矽膠鏟面；握感穩、邊緣不刮傷多數鍋具。",
+    scenes: "廚房水槽旁、流理台抽屜、陽台清潔櫃——會隨手拿的小工具區。",
+    care: "用後擦乾；木柄避免長時間泡水。",
+    styleNote:
+      "掛在木柄清潔刷旁邊，水槽區會比較一致。工具少而準，比塞滿一整排舒服。",
+  },
+  {
+    slug: "matte-clip-set",
+    name: "霧面收納夾組",
+    shortName: "霧面收納夾組",
+    category: "tools",
+    categoryLabel: "小工具",
+    why: "密封袋、備忘紙、充電線——夾一下就定位。",
+    description:
+      "霧面夾身、力道剛好。夾密封袋、備忘、線材，抽屜裡或冰箱門上都安靜好認。",
+    status: "interest",
+    materials: "霧面樹脂／金屬夾身；彈力適中、邊緣圓潤。",
+    scenes: "冰箱門、抽屜、書桌——需要暫時固定小物的地方。",
+    care: "濕布輕擦；避免用力扳超過開合角度。",
+    styleNote:
+      "選霧灰或米白，跟收納罐、線材盒同色系。夾子成組放小托盤裡，找得到也不散。",
+  },
+  {
+    slug: "tool-wall-rack",
+    name: "簡約工具掛架／捲尺收納",
+    shortName: "工具掛架",
+    category: "tools",
+    categoryLabel: "小工具",
+    why: "捲尺、剪刀、小工具——掛起來，抽屜就鬆了。",
+    description:
+      "牆上掛一排，常用小工具各有位子。捲尺、剪刀、鑰匙圈，伸手就拿到，桌面也不必堆。",
+    status: "interest",
+    materials: "霧面金屬／木質掛桿 × 可調掛鉤；安裝簡、承重穩。",
+    scenes: "玄關牆、工作桌旁、儲藏室門內——小工具常進出的動線。",
+    care: "乾布輕拭；鎖固件定期檢查是否鬆動。",
+    styleNote:
+      "掛架本身選低調霧色，掛上去的東西才是主角。旁邊留白，牆面不會顯得擠。",
+  },
+  // —— 廚房 ——
+  {
+    slug: "matte-ceramic-bowl-set",
+    name: "霧面陶瓷飯碗組",
+    shortName: "霧面陶瓷飯碗組",
+    category: "kitchen",
+    categoryLabel: "廚房",
+    why: "每天捧三次，碗的觸感值得認真一點。",
+    description:
+      "霧面釉、碗口圓潤。盛飯、盛湯都剛好，疊起來不占空間，打開碗櫃也不刺眼。",
+    status: "interest",
+    materials: "陶瓷坯體、霧面釉；成組尺寸一致、碗底穩。",
+    scenes: "日常用餐、一人食、小家庭餐桌——每天會用到的碗。",
+    care: "可洗碗機（視標示）；避免空燒與劇烈溫差。",
+    styleNote:
+      "米白或淺灰最百搭。跟木柄餐具、玻璃水瓶同桌，層次清楚卻不吵。",
+  },
+  {
+    slug: "wood-handle-cutlery",
+    name: "木柄餐具組",
+    shortName: "木柄餐具組",
+    category: "kitchen",
+    categoryLabel: "廚房",
+    why: "刀叉勺握起來溫潤，餐桌也少一點冰冷感。",
+    description:
+      "木柄配霧面金屬。吃飯時手感舒服，收進抽屜或插在罐裡都好看。",
+    status: "interest",
+    materials: "天然木柄 × 不鏽鋼餐具頭；握感圓潤、銜接穩固。",
+    scenes: "日常餐桌、一人食、野餐小包——會隨身或常拿的那組。",
+    care: "手洗後擦乾木柄；避免長時間浸泡與洗碗機高溫（視標示）。",
+    styleNote:
+      "跟霧面飯碗、木托盤很合。餐桌只放要用的幾支，留白比擺滿舒服。",
+  },
+  {
+    slug: "glass-water-carafe",
+    name: "玻璃水瓶／壺",
+    shortName: "玻璃水瓶壺",
+    category: "kitchen",
+    categoryLabel: "廚房",
+    why: "桌上放一壺水，看起來清爽，倒起來也順。",
+    description:
+      "透明玻璃、壺嘴好倒。冰水或常溫水都適合，放餐桌或書桌，像一件小器物。",
+    status: "interest",
+    materials: "耐熱／日常玻璃 × 可選木蓋或玻璃蓋；壺嘴導流清楚。",
+    scenes: "餐桌、書桌、床頭——希望隨時有水可倒的地方。",
+    care: "溫水沖洗；避免驟冷驟熱與撞擊。",
+    styleNote:
+      "透明玻璃跟霧面碗、木柄餐具並排，材質對話清楚。旁邊放個水杯就夠，不必再堆。",
   },
 ];
 
