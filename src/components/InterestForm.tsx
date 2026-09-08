@@ -8,7 +8,6 @@ const NOTION_URL =
 
 const DIRECTIONS = [
   { value: "小家居", label: "小家居" },
-  { value: "燈具", label: "燈具" },
   { value: "小工具", label: "小工具" },
   { value: "廚房", label: "廚房" },
   { value: "清潔", label: "清潔" },

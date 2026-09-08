@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 const LINKS = [
   { href: "/collections/home/", label: "小家居" },
-  { href: "/collections/lights/", label: "燈具" },
   { href: "/collections/tools/", label: "小工具" },
   { href: "/collections/kitchen/", label: "廚房" },
   { href: "/collections/clean/", label: "清潔" },

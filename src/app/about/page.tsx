@@ -22,7 +22,7 @@ export default function AboutPage() {
             ，不是折扣碼。
           </p>
           <p className="mx-auto max-w-lg text-sm font-light leading-[1.9] tracking-wide text-charcoal-mute">
-            晴室偏安靜的材質跟清楚的功能：小家居、燈具、小工具、廚房、清潔、3C、寵物。上架節奏跟著樣品跟興趣走，寧可慢一點，也不堆一堆其實用不到的東西。
+            晴室偏安靜的材質跟清楚的功能：小家居、小工具、廚房、清潔、3C、寵物。上架節奏跟著樣品跟興趣走，寧可慢一點，也不堆一堆其實用不到的東西。
           </p>
           <div className="mt-10">
             <Link href="/interest/" className="btn-primary">

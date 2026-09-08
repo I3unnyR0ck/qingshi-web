@@ -12,7 +12,7 @@ export default function SiteFooter() {
             <p className="text-[0.8125rem] font-light leading-[1.85] tracking-wide text-charcoal-mute">
               少一點東西，多一點剛好。
               <br />
-              小家居、燈具、廚房、寵物……慢慢挑。
+              小家居、廚房、寵物……慢慢挑。
             </p>
           </div>
           <div>
@@ -26,14 +26,6 @@ export default function SiteFooter() {
                   className="text-[0.8125rem] font-light tracking-wide text-charcoal-mute hover:text-wood-deep"
                 >
                   小家居
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/collections/lights/"
-                  className="text-[0.8125rem] font-light tracking-wide text-charcoal-mute hover:text-wood-deep"
-                >
-                  燈具
                 </Link>
               </li>
               <li>

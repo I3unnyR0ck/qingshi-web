@@ -46,7 +46,7 @@ export default function HomePage() {
             少一點東西，多一點剛好。
           </p>
           <p className="mx-auto mb-9 max-w-lg text-[0.9375rem] font-light leading-[1.9] tracking-wide text-charcoal-mute">
-            精選帶有無印質感的家居小物——燈具、廚房、寵物、3C 與清潔用具，慢慢挑。
+            精選帶有無印質感的家居小物——小家居、廚房、寵物、3C 與清潔用具，慢慢挑。
             <br />
             不堆貨、不催促——只留會讓日常變順手的那幾樣。
           </p>

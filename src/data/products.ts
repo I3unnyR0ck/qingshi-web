@@ -1,6 +1,5 @@
 export type CategoryId =
   | "home"
-  | "lights"
   | "tools"
   | "kitchen"
   | "clean"
@@ -40,17 +39,9 @@ export const CATEGORIES: Record<
     id: "home",
     label: "小家居",
     path: "/collections/home/",
-    lead: "木、霧面、陶瓷。把每天會碰到的小東西，放回你喜歡的位置。",
+    lead: "木、霧面、陶瓷，還有擺設燈具。把每天會碰到的小東西，放回你喜歡的位置。",
     intro:
-      "進門、書桌、床邊——那些你每天都會碰到的小物。我們挑觸感舒服、顏色不搶戲的，讓歸位變得自然一點。",
-  },
-  lights: {
-    id: "lights",
-    label: "燈具",
-    path: "/collections/lights/",
-    lead: "燈光不必太亮，剛好照出一點安靜就好。",
-    intro:
-      "桌燈、小夜燈、氣氛燈。材質偏霧面、紙質、木座，讓光在空間裡軟一點、慢一點。",
+      "進門、書桌、床邊——托盤、收納，還有桌燈、小夜燈這類擺設燈具。我們挑觸感舒服、顏色不搶戲的，讓歸位變得自然一點。",
   },
   tools: {
     id: "tools",
@@ -309,7 +300,7 @@ export const products: Product[] = [
     slug: "matte-desk-lamp",
     name: "霧面桌燈",
     shortName: "霧面桌燈",
-    category: "lights",
+    category: "home",
     categoryLabel: "燈具",
     why: "書桌需要一點光，但不需要刺眼。",
     description:
@@ -325,7 +316,7 @@ export const products: Product[] = [
     slug: "paper-fabric-night-light",
     name: "紙／布質小夜燈",
     shortName: "紙布小夜燈",
-    category: "lights",
+    category: "home",
     categoryLabel: "燈具",
     why: "半夜起來，只要一點柔光就好。",
     description:
@@ -341,7 +332,7 @@ export const products: Product[] = [
     slug: "wood-base-mood-lamp",
     name: "木座氣氛燈",
     shortName: "木座氣氛燈",
-    category: "lights",
+    category: "home",
     categoryLabel: "燈具",
     why: "不是為了看清楚，是為了讓空間鬆一點。",
     description:
