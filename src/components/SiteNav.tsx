@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/basePath";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -66,7 +67,7 @@ export default function SiteNav() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/brand/logo-circle-nav.png"
+            src={withBasePath("/brand/logo-circle-nav.png")}
             alt="晴室"
             width={40}
             height={40}

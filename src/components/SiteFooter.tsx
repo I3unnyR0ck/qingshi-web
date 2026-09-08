@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/basePath";
 
 export default function SiteFooter() {
   return (
@@ -9,7 +10,7 @@ export default function SiteFooter() {
           <div>
             <div className="mb-[0.85rem] flex items-center gap-2.5">
               <Image
-                src="/brand/logo-circle-nav.png"
+                src={withBasePath("/brand/logo-circle-nav.png")}
                 alt="晴室"
                 width={32}
                 height={32}
