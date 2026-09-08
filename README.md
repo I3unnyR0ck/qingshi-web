@@ -1,46 +1,41 @@
-# 青柿 Qingshi — web storefront
+# 晴室 qingshi-web
 
-Static Next.js storefront (App Router, `output: "export"`). Source stays editable on GitHub; deploy is free HTTPS via GitHub Pages.
+靜態 Next.js 商店前台（App Router、`output: "export"`）。原始碼可在 GitHub 上直接編輯；透過 GitHub Pages 免費提供 HTTPS 靜態站。
 
-## Why this setup
+## 為什麼這樣做
 
-- **GitHub** — edit source, review PRs, keep history.
-- **GitHub Pages** — free HTTPS for the static `out/` export (Project Pages under `/{repo-name}/`).
-- **Later** — move to Cloudflare Pages and/or a custom domain without rewriting the app.
-- **Cart & payment later** — add cart + 綠界 / 藍新 (or similar) yourself; no Shopify lock-in.
+- **GitHub** — 可編輯原始碼、審 PR、保留歷史。
+- **GitHub Pages** — 免費 HTTPS，部署靜態 `out/`（專案頁路徑為 `/{repo-name}/`）：https://i3unnyr0ck.github.io/qingshi-web/
+- **之後** — 可移到 Cloudflare Pages 與／或自訂網域，不必重寫應用。
+- **購物車與金流之後再加** — 自行接購物車 + 綠界／藍新（或類似方案）；不用 Shopify。
 
-## Local development
+## 本機開發
 
-```bash
+```
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+開啟 [http://localhost:3000](http://localhost:3000)。
 
-## Production build (local / root path)
+## 建置
 
-Leave `PAGES_BASE_PATH` unset so assets and routes use `/`:
-
-```bash
+```
 npm run build
 ```
 
-Static files land in `out/`. Preview with any static server, e.g. `npx serve out`.
+靜態輸出在 `out/`。若要對應 GitHub Pages 的專案路徑，請用：
 
-## GitHub Pages
+```
+PAGES_BASE_PATH=/qingshi-web npm run build
+# 或
+PAGES_BASE_PATH=/qingshi-web ./node_modules/.bin/next build
+```
 
-Push to `main` runs [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml):
+## 部署到 GitHub Pages
 
-1. `npm ci` + build with `PAGES_BASE_PATH=/{repository-name}`
-2. Uploads `out/` and deploys via Actions Pages
+1. 以 `PAGES_BASE_PATH=/qingshi-web` 建置，產出 `out/`。
+2. **必須**在 `out/` 根目錄放入空的 `.nojekyll`（否則 Jekyll 會忽略 `_next/`，CSS／JS 會 404）。
+3. 將 `out/` 內容推到 `gh-pages` 分支。
 
-In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-
-`PAGES_BASE_PATH` is set by the workflow; see [`.env.example`](.env.example). Do not commit real `.env` files.
-
-## Stack notes
-
-- Next.js 15, React 19, Tailwind CSS
-- `images.unoptimized` + static export (no Image Optimization server)
-- Room later for cart / payment APIs without changing the Pages hosting model for the storefront shell
+線上站點：https://i3unnyr0ck.github.io/qingshi-web/
